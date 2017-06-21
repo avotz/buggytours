@@ -1,0 +1,955 @@
+@import "nib"
+@import "normalize.styl"
+@import "icons.styl"
+
+
+
+verde = #97d301
+turquesa = #68C8CE
+azul = #25323D
+celeste = #25a1e7
+fusia = #FF3EAA
+gris = #777777
+gris2 = #a1a0a0
+naranja = #FD6100
+
+*
+	box-sizing border-box
+*
+	&:after
+	&:before
+		box-sizing border-box
+
+
+body
+	font-family 'Roboto', serif
+	font-size 80%
+	line-height 30px
+	background #FFF
+	color gris2
+
+ul
+	margin 0
+	padding 0
+	
+
+a
+	text-decoration none
+	transition all .5s ease
+	
+
+h1
+h2
+h3
+h4
+h5
+	margin-top 0
+	font-weight 700
+h1
+	line-height 45px
+
+img
+	max-width 100%
+	height auto
+input[type="text"]
+input[type="email"]
+input[type="number"]
+select
+textarea
+	width 100%
+	height 32px
+textarea
+	height 90px
+.right
+	right 0
+.left
+	left 0
+.txt-center
+	text-align center
+.cursive
+	font-family 'Dancing Script', cursive !important
+.cursive2
+	font-family 'Playfair Display', serif !important
+	font-style italic
+.times 
+	font-family 'Times New Roman', serif	!important
+.no-padding
+	padding-left 0 !important
+	padding-right 0 !important
+
+.fusia
+	background-color fusia !important
+.celeste
+	background-color celeste !important
+.verde
+	background-color verde !important
+.naranja
+	background-color naranja !important
+.transparent
+	background-color transparent
+	
+.btn
+.wpcf7-submit
+	padding .5rem .8rem
+	border-radius 6px
+	display inline-block
+	color white
+	transition all .5s ease
+	border 1px solid #229b60
+	box-shadow 0 1px 1px #216e47
+	
+	&:hover
+		background-color white
+		border-color #d6d6d6
+		box-shadow 0 1px 1px gris
+		color gris
+
+.wpcf7-submit
+	border none
+	background-color fusia
+	&:hover
+		background-color celeste
+		color white
+.inner
+	max-width 1600px
+	margin 0 auto
+	position relative
+	padding-left 1rem
+	padding-right 1rem
+
+@media screen and (min-width: 1024px)
+	body 
+		font-size 100%
+		
+.header
+	height 70px
+	position absolute
+	width 100%
+	background-color #000
+	z-index 999
+	&:after
+		content ''
+		position absolute
+		bottom -3px
+		left 0
+		z-index 2
+		width 100%
+		height 1px
+		background rgba(verde,0.6)
+	&__menu
+		display none
+		position absolute
+		top 70px
+		left 0
+		right 0
+		background-color verde
+		z-index 100
+		text-align center
+		li
+		&__item
+			display block
+		a
+		&__link
+			display block
+			padding .5rem
+			color white
+			text-transform uppercase
+			&:hover
+				color white
+			
+	&__logo
+		display block
+		width 110px
+		padding-top 5px
+		z-index 200
+		position absolute
+	&__btn-menu
+		position absolute
+		right 0
+		top 15px
+		background transparent
+		border none
+		font-size 2rem
+		color white
+		outline none
+
+@media screen and (min-width: 1024px)			
+	.header
+		position fixed
+		text-align center
+		&__logo
+			display inline-block
+			position absolute
+			left 49%
+			width 150px
+			transform translate(-45%,0)
+			
+			/*&:after
+				transition 250ms linear
+				-webkit-backface-visibility hidden
+				content ''
+				position absolute
+				left 0
+				top 0
+				z-index 1
+				width 100%
+				height 100%
+				z-index 2
+				//border 1px solid #fff
+				border-radius 5px*/
+			&:after
+				height calc(100% + 8px)
+				width calc(100% + 6px)
+				transform translate(-3px, -14px)
+		&__menu 
+			display block !important
+			background-color transparent
+			top 10px
+			
+			li
+			&__item
+				display inline-block
+				&#menu-item-18
+				&.center-left 
+					margin-right 60px
+				&#menu-item-17	
+				&.center-right
+					margin-left 60px
+				
+			a
+			&__link
+				padding .5rem 1rem
+				&:hover
+					color verde
+				
+					
+		&__btn-menu
+			display none
+			
+
+
+		
+
+.intro
+	background-image url('./img/intro.jpg');
+	background-position center center
+	background-size cover
+	height 500px
+	position relative
+	top 70px
+	z-index 0
+	text-align center
+	&__video
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		z-index -1
+		opacity 0
+		&:before
+			content ""
+			z-index 1
+			position absolute
+			//background url(./img/shadow.png) no-repeat 50% 50%
+			background-size cover
+			top 0
+			left 0
+			width 100%
+			height 100%
+			
+		video
+			position absolute
+			top 50%
+			left 50%
+			pointer-events: none;
+			transform translate(-50%,-50%)
+	&:after
+		content ''
+		background-color rgba(0,0,0,.35)
+		position absolute
+		left 0
+		right 0
+		top 0
+		bottom 0
+		width 100%
+		height 100%
+	&__content
+		padding-top 45px
+		padding-bottom 45px
+		color white
+		position relative
+		z-index 1
+	&__title
+		font-weight 700
+		font-size 3rem
+		//text-shadow 1px 1px 2px rgba(0, 0, 0, .75)
+	&__subtitle
+		font-family 'Arial'
+		letter-spacing 5px
+		
+	&__cuadro
+		color gris
+		background-color rgba(white, .85)
+		position relative
+		padding-top 1rem
+		padding-bottom 1rem
+		width 75%
+		max-width 26.5625rem
+		display inline-block
+		margin-bottom 1rem
+		color white
+		//margin-right 5rem
+		&:hover
+			background-color rgba(white, .75)
+			color #000
+			&:before
+			&:after
+				width calc(100%)
+				opacity 0
+				transform translate(0, 0)
+			
+		&:last-child
+			margin-right 0
+		&:before
+		&:after
+			transition 250ms linear
+			-webkit-backface-visibility hidden
+			content ''
+			position absolute
+			left 0
+			top 0
+			z-index 1
+			width 100%
+			height 100%
+			z-index 2
+			border 1px solid white
+			border-radius 5px
+			
+		&:before
+			width calc(100% + 8px)
+			transform translate(-4px, 0)
+		&:after
+			height calc(100% + 8px)
+			transform translate(0, -4px)
+		&__subtitle
+			//font-style italic
+			margin-bottom 10px
+			display block
+			color white
+		&__title
+			text-transform uppercase
+			margin-bottom 10px
+			font-weight 700
+			font-size 2.5rem
+		&__date
+			color gris2
+		&__link
+			position absolute
+			display block
+			left 0
+			right 0
+			top 0
+			bottom 0
+			z-index 3
+	&__scroll
+		display none
+		position absolute
+		bottom 10%
+		left 50%
+		z-index 100
+		font-size 3rem
+		color white
+		padding 0 1.5rem
+		border-radius 5px
+		transform translate(-50%, 0)
+		&:before
+		&:after
+			transition 250ms linear
+			-webkit-backface-visibility hidden
+			content ''
+			position absolute
+			left 0
+			top 0
+			z-index 1
+			width 100%
+			height 100%
+			z-index 2
+			border 1px solid #fff
+			border-radius 5px
+		&:hover
+			border 1px solid white
+			&:before
+			&:after
+				width calc(100%)
+				opacity 0
+				transform translate(0, 0)
+		&:before
+			width calc(100% + 8px)
+			transform translate(-4px, 0)
+		&:after
+			height calc(100% + 8px)
+			transform translate(0, -4px)
+			
+	&.intro-page
+		height 260px
+		padding-top 0
+		&:after
+			background transparent
+		.item 
+			background-size: cover;
+			background-position: center center;
+			width: 100%;
+			height: 260px;//40vh;
+			
+@media screen and (min-width: 900px)
+	.intro
+		&__cuadro
+			width 20%
+			margin-right 5rem
+@media screen and (min-width: 1024px)
+	.intro
+		padding-top 100px
+		height 100vh
+		overflow hidden
+		&__title
+			font-size 4rem
+			margin-bottom 7rem
+			line-height 60px
+		&__subtitle
+			font-size 2rem
+			margin-bottom 2rem
+		&__scroll
+			display block
+
+		&.intro-page
+			height 40vh
+			.item 
+				height: 40vh;
+			
+@media screen and (min-width: 1400px)
+	.intro
+		//padding-top 55px
+		&__title
+			font-size 4rem
+			
+			
+@media screen and (min-width: 1600px)
+	.intro
+		//padding-top 55px
+		&__title
+			font-size 5rem
+		
+			
+.tours
+	margin-top 70px
+	overflow hidden
+	background-color verde
+	&__text
+		display none
+		position relative
+		z-index 3
+		padding 25px 30px 0
+		padding 1.5625rem 2.875rem 0
+		width 32.25%
+		color white
+		
+	&__title
+		text-transform uppercase
+		color white
+		font-size 2.5rem
+		border-bottom 1px dotted white
+		padding-bottom 1rem
+		
+	&__imgs
+		width 100%
+		background-color verde
+		//display none
+		&__slide
+			width 100%
+			height 380px
+			background-size cover
+			background-position top center
+			text-align center
+			color white
+			position relative
+			&:after
+				content ''
+				position absolute
+				left 0
+				top 0
+				z-index 1
+				width 100%
+				height 100%
+				background rgba(0,0,0,0.15)
+				
+			&__title
+				position relative
+				top 40%
+				font-size 4rem
+				z-index 2
+				text-transform uppercase
+			&__link
+				color white
+				position absolute
+				bottom 10%
+				left 50%
+				transform translate(-50%, 0)
+				z-index 2
+				background-color white
+				padding .5rem
+				&:before
+				&:after
+					transition 250ms linear
+					-webkit-backface-visibility hidden
+					content ''
+					position absolute
+					left 0
+					top 0
+					z-index 1
+					width 100%
+					height 100%
+					z-index 2
+					border 1px solid #fff
+					border-radius 5px
+				&:hover
+					background-color rgba(255, 255, 255, .7)
+					&:before
+					&:after
+						width calc(100%)
+						opacity 0
+						transform translate(0, 0)
+				&:before
+					width calc(100% + 8px)
+					transform translate(-4px, 0)
+				&:after
+					height calc(100% + 8px)
+					transform translate(0, -4px)
+		&__pager
+			position absolute
+			z-index 200
+			right 45px
+			bottom 1rem
+			display none
+			span
+				font-size 5rem
+				color white
+				display inline-block
+				padding .5rem
+				vertical-align middle
+				cursor pointer
+			.cycle-pager-active
+				color gris
+		.cycle-prev
+		.cycle-next
+			position absolute
+			top 35%
+			z-index 200
+			color white
+			font-size 3.5rem
+			cursor pointer
+		.cycle-prev
+			left 15px
+		.cycle-next
+			right 15px
+
+@media screen and (min-width: 1024px)
+	.tours
+		position relative
+		height 485px
+		&__text
+			display block
+			
+		&__imgs
+			position absolute
+			left 32.25%
+			width 67.75%
+			z-index 2
+			top 0
+			&:after
+			&:before
+				content ''
+				position absolute
+				left 0
+				top 0
+				z-index 1
+				width 100%
+				height 100%
+				z-index 999
+				width 100%
+				transform skew(-17deg, 0)
+				transition transform 0.4s ease 0.15s
+			&:before
+				left -99.5%;
+				left calc(-89% + 5px)
+				border-right 1px solid rgba(255,255,255,0.7)		
+			&:after
+				left -89%
+				background verde
+			&__slide
+				height 485px
+				&__title
+					top 48%
+					left 50%
+					transform translate(-45%,0)
+				&__link
+					transform translate(-20%,0)
+			&__pager
+				display block
+			.cycle-prev
+			.cycle-next
+				top 45%
+			.cycle-prev
+				left 120px
+@media screen and (min-width: 1200px)
+	.tours
+		&__text
+			padding 4.5625rem 2.875rem 0
+		&__imgs
+			&:before
+				left calc(-90% + 5px)
+			&:after
+				left -90%
+@media screen and (min-width: 1400px)
+	.tours
+		&__title
+			font-size 3.5rem
+		&__imgs
+			.cycle-prev
+			.cycle-next
+				font-size 7.5rem
+				
+			
+@media screen and (min-width: 1600px)
+	.tours
+		&__text
+			padding 6.5625rem 2.875rem 0
+		&__imgs
+			&:before
+				left calc(-93.5% + 5px)
+			&:after
+				left -93.5%
+			.cycle-prev
+				left 140px
+
+.main 
+	padding-top 6rem
+	padding-bottom 2rem
+	color #000
+	.inner
+		max-width 1200px
+.buggy
+	height 380px
+	background-image url('./img/home-buggy.jpg');
+	background-position center center
+	background-size cover
+	width 100%
+	text-align center
+	color white
+	padding-top 45px
+	position relative
+	&__title 
+		text-transform uppercase
+		border-bottom 1px dotted white
+		padding-bottom 1rem
+		line-height 2rem
+	&__link
+		position absolute
+		left 50%
+		transform translate(-50%, 0)
+		z-index 2
+		background-color fusia
+		padding .5rem
+		color white
+		&:before
+		&:after
+			transition 250ms linear
+			-webkit-backface-visibility hidden
+			content ''
+			position absolute
+			left 0
+			top 0
+			z-index 1
+			width 100%
+			height 100%
+			z-index 2
+			border 1px solid #fff
+			border-radius 5px
+		&:hover
+			background-color rgba(255, 255, 255, .7)
+			&:before
+			&:after
+				width calc(100%)
+				opacity 0
+				transform translate(0, 0)
+		&:before
+			width calc(100% + 8px)
+			transform translate(-4px, 0)
+		&:after
+			height calc(100% + 8px)
+			transform translate(0, -4px)
+		
+@media screen and (min-width: 1024px)
+	.buggy
+		height 485px
+		padding-top 8rem
+		&__title
+			font-size 2.5rem
+			
+@media screen and (min-width: 1400px)
+	.buggy
+		&__title
+			font-size 3.5rem
+
+.entry-content
+	ul 
+		margin-left 45px 
+		
+.about
+.contact
+	padding-top 45px
+	padding-left 1rem
+	padding-right 1rem
+	padding-bottom 45px
+	position relative
+	overflow hidden 
+	background-color #000
+	&__title 
+		text-transform uppercase
+		color white
+		border-bottom 1px dotted gris2
+		padding-bottom 1rem
+	&__text
+		color white
+		text-align center
+		z-index 3
+		position relative 
+	&__img
+		display block
+		position absolute
+		left 0
+		width 100%
+		top 0
+		opacity 0.1
+		z-index 2 
+		&__container
+			height 348px
+			background-size cover
+			background-position center center
+	
+	&__link
+		color white
+		position absolute
+		bottom 10%
+		left 50%
+		transform translate(-50%, 0)
+		z-index 2
+		background-color celeste
+		padding .5rem
+		&:before
+		&:after
+			transition 250ms linear
+			-webkit-backface-visibility hidden
+			content ''
+			position absolute
+			left 0
+			top 0
+			z-index 1
+			width 100%
+			height 100%
+			z-index 2
+			border 1px solid #fff
+			border-radius 5px
+		&:hover
+			background-color rgba(255, 255, 255, .7)
+			&:before
+			&:after
+				width calc(100%)
+				opacity 0
+				transform translate(0, 0)
+		&:before
+			width calc(100% + 8px)
+			transform translate(-4px, 0)
+		&:after
+			height calc(100% + 8px)
+			transform translate(0, -4px)
+
+	iframe
+		width 100%
+		min-height 400px 
+
+@media screen and (min-width: 1024px)
+	.contact
+	.about
+		height 380px
+		padding 0
+		&__text
+			width 50%
+			max-width 850px
+			max-width 53.125rem
+			padding 20px 10px 40px 40px
+			padding 1.5625rem 2.875rem 0
+			text-align left
+		&__img
+		&__media
+			display block
+			position absolute
+			left 50%
+			width 50%
+			top 0
+			opacity 1
+			&:after
+			&:before
+				content ''
+				position absolute
+				left 0
+				top 0
+				width 100%
+				height 100%
+				z-index 1
+				width 100%
+				transform skew(-17deg, 0)
+				transition transform 0.4s ease 0.15s
+			&:before
+				left -99.5%
+				left calc(-90% + 5px)
+				border-right 1px solid rgba(255,255,255,0.7)
+			&:after
+				left -90%
+				background #000
+				
+			&__container
+				height 380px
+				background-size cover
+				background-position center center
+	.contact
+		height auto
+		padding-top: 2.5rem;
+		padding-bottom 2.5rem
+		&__media
+			&:after
+				left -78%
+				
+		iframe
+			width 100%
+			min-height 758px 
+@media screen and (min-width: 1200px)
+	.about
+	.contact 
+		&__text
+			padding 4.5625rem 2.875rem 0
+				
+@media screen and (min-width: 1400px)
+	.about
+	.contact 
+		&__title
+			font-size 3.5rem			
+.footer
+	color #a1a0a0
+	padding-top 15px
+	background-color #222//#F6F6F6
+	&__top
+		display none
+		background-color #F6F6F6
+	&__bottom
+		text-align center
+	&__logo
+		margin-top 10px
+		&__link
+			display inline-block
+			//width 50px
+			color gris
+			font-size 11px	
+			display none
+		span
+			display block
+			font-size 11px
+	&__social
+		&__link
+			color white//#D6D6D6
+			font-size 2rem
+			display inline-block
+			padding .5rem
+			border 1px solid white//#D6D6D6
+			border-radius 50%
+			&:first-child
+				padding .5rem .9rem
+			&:last-child
+				padding .5rem .8rem
+			&:hover
+				color #68C8CE
+			&.pinterest
+				&:hover
+					color #910101
+			&.youtube
+				&:hover
+					color #e52d27
+			&.google
+				&:hover
+					color #DA5333
+			&.twitter
+				&:hover
+					color #55acee
+			&.facebook
+				&:hover
+					color #3b5999
+	&__copyright
+		p 
+			margin 0
+		a 
+			display inline-block
+			font-size 2rem
+			vertical-align middle
+			color gris2
+				
+@media screen and (min-width: 1024px)
+	.footer
+		background-color #222
+		padding-top 0
+		position relative
+		//bottom 8rem
+		left 0
+		right 0
+		&__top 
+			display none
+			padding 2.2rem 0
+			text-align center
+		&__bottom
+			padding .5rem 0
+		&__menu
+			display none
+			&__item
+				display inline-block
+				
+			&__link
+				display block
+				padding 0 1.2rem
+				text-transform uppercase
+				color gris
+				&:hover
+					color turquesa
+		&__logo
+			//display none
+			text-align center
+			margin 0
+			
+			&__link
+				border-bottom 1px solid #D6D6D6
+				display inline-block
+		&__copyright
+			//display none
+			position absolute
+			left 5%
+			float left
+			top 30%
+		&__social
+			float right
+			position absolute
+			right 5%
+			top 15%
+			&__link
+				color #D6D6D6
+				border-color #D6D6D6
+			
+		 
+			
