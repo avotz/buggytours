@@ -10,7 +10,13 @@
            
         });
       
-     
+      $(".date").flatpickr({
+      minDate: "today",
+      onChange: function(selectedDates, dateStr, instance) {
+           //$('.filters').find('form').submit();
+        },
+    });
+       $('select').select2();
 
     // SMOOTH ANCHOR SCROLLING
     var $root = $('html, body');
@@ -155,6 +161,108 @@
 
      }
 
+// FUNCTION FOR More info
+
+    var btnIncludes = $('.product-description-accordion-button');
+    var IncludesContent = $('.product-description-accordion-content');
+    
+    IncludesContent.addClass('hidden');
+
+    btnIncludes.on('click', function (e) {
+        $(this)
+            .next()
+            .slideToggle(200);
+            /*.siblings('.product-description-accordion-content')
+            .slideUp(200);*/
+
+    });
+
+    $(".owl-carousel").owlCarousel({
+      animateOut: 'fadeOut',
+      items : 1,
+      autoplay : true,
+      autoplayTimeout: 4000,
+      loop : true,
+      nav : true,
+      navText : ['','']
+      /*onChange : function (e) {
+        console.log(e.target);
+        $('.owl-item.active span').addClass('animated');
+        $('.owl-item.active h1').addClass('animated');
+      }*/
+      /*slideSpeed : 300,
+      paginationSpeed : 400,*/
+      /*singleItem:true*/
+  });
+
+     $('.tour-popup-link').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
+
+               
+                $('body').removeClass('mfp-open');
+            }
+
+        }
+
+       
+    });
+
+     fillSelectTour();
+
+  function fillSelectTour(){
+         
+        
+          $.ajax({
+                type: 'GET',
+                url: '/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+                
+                success: function(data){
+                    console.log(data)
+
+                    var items = [];
+
+                var select = $('select[name="tours[]"]').empty();
+                $.each(data.posts, function(i,item) {
+                  select.append( '<option value="'
+                                       + $.trim(item.slug) + '">'
+                                       + item.title
+                                       + '</option>' ); 
+
+
+           
+                });
+          
+
+                //select.prepend('<option value="" selected><span style="color:red;">--</span></option>');
+                    
+                },
+                error:function(){
+                    console.log('error cargando los tours')
+                }
+            });
+          
+    }
+
+    $('.tour-popup-link').on('click',function (e) {
+      
+    
+      //console.log($(this).data('activitie'))
+      //$('#tour-popup').find('select[name="tour[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
+      $('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
+      
+      console.log($('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]'))
+      
+
+      });
 
 
 

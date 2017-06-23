@@ -52,6 +52,12 @@
             </div>
             
         </footer>
+        <div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
+        
+         <?php  echo do_shortcode('[contact-form-7 id="50" title="Book Tour"]') ;?>
+              
+        
+    </div>
 <?php wp_footer(); ?>
 
 </body>

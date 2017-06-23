@@ -9,9 +9,37 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section class="intro intro-page">
+               
+                    <!-- <article class="intro__content">
+                        <h2 class="intro__subtitle wow fadeInLeft">Explore Buggy tours</h2>
+                        <h1 class="intro__title wow fadeInRight">YOUR DREAM DESTINATION AWAITS</h1>
 
+                    </article> -->
+                     <?php if ( has_post_thumbnail() ) :
+
+					  	 	$id = get_post_thumbnail_id($post->ID);
+					  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
+					  	 	?>
+					    	
+							<div class="item" style="background-image: url('<?php echo $thumb_url[0] ?>');">
+					  	  		
+					  	  	</div>
+							
+						<?php else : ?>
+					  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/intro.jpg');">
+					  	  		
+					  	  </div>
+					  	 
+					  	<?php endif; ?>
+                   
+               
+
+             
+
+       </section>
+	 <section class="main">
+        <div class="inner">
 		<?php
 		if ( have_posts() ) : ?>
 
@@ -43,9 +71,9 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div><!-- #main -->
+	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

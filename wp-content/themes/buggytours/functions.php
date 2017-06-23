@@ -127,6 +127,25 @@ function my_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
 
+function add_taxonomy_controller($controllers) {
+  $controllers[] = 'Taxonomy';
+  return $controllers;
+}
+add_filter('json_api_controllers', 'add_taxonomy_controller');
+
+function set_taxonomy_controller_path() {
+  return get_stylesheet_directory() . '/json-api-taxonomy-index.php';
+}
+add_filter('json_api_taxonomy_controller_path', 'set_taxonomy_controller_path');
+
+function word_count($string, $limit) {
+ 
+	$words = explode(' ', $string);
+ 
+	return implode(' ', array_slice($words, 0, $limit)). '...';
+ 
+}
+
 /**
  * Implement the Custom Header feature.
  */
@@ -151,3 +170,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Implement the Custom woocommerce feature.
+ */
+require get_template_directory() . '/inc/wc.php';

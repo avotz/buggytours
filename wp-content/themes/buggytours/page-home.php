@@ -26,12 +26,7 @@ get_header(); ?>
                             <a href="<?php echo esc_url( home_url( '/tours' ) ); ?>" class="intro__cuadro__link"></a>
                             
                         </div>
-                         <div class="intro__cuadro celeste  wow fadeInDown">
-                            <span class="intro__cuadro__subtitle">Rental</span>
-                            <h2 class="intro__cuadro__title">Buggy</h2>
-                            <a href="#" class="intro__cuadro__link"></a>
-                           
-                        </div>
+                        
                         
                     </article>
                    
@@ -75,18 +70,47 @@ get_header(); ?>
                             <div class="cycle-prev"><i class="icon-angle-left"></i></div>
                             <div class="cycle-next"><i class="icon-angle-right"></i></div>
 
-                            <div class="tours__imgs__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/home-tours1.jpg');">
-                                <h2 class="tours__imgs__slide__title ">Amateur</h2>
-                                <a href="#" class="tours__imgs__slide__link verde">View Tours</a>
-                            </div>
-                            <div class="tours__imgs__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/home-tours2.jpg');">
-                                <h2 class="tours__imgs__slide__title ">Medium</h2>
-                                <a href="#" class="tours__imgs__slide__link celeste">View Tours</a>
-                            </div>
-                            <div class="tours__imgs__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/home-tours3.jpg');">
-                                <h2 class="tours__imgs__slide__title ">Pro</h2>
-                                 <a href="#" class="tours__imgs__slide__link naranja">View Tours</a>
-                            </div>
+                            <?php
+                                $args = array(
+                                  'post_type' => 'product',
+                                  //'order' => 'ASC',
+                                  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+                                  'posts_per_page' => 10,
+                                 /*'tax_query' => array(
+                                    array(
+                                      'taxonomy' => 'product_cat',
+                                      'field' => 'slug',
+                                      'terms' => $category->slug
+                                    )
+                                  )*/
+                                  
+                                );
+                                $items = new WP_Query( $args );
+                                
+                                if( $items->have_posts() ) {
+                                  while( $items->have_posts() ) {
+                                     $items->the_post();
+                                   
+                                    ?>
+                                     <?php if ( has_post_thumbnail() ) :
+
+                                          $id = get_post_thumbnail_id($post->ID);
+                                          $thumb_url = wp_get_attachment_image_src($id,'large', true);
+                                          ?>
+                                          
+                                       
+                                        
+                                      <?php endif; ?>
+                                    <div class="tours__imgs__slide" style="background-image: url('<?php echo $thumb_url[0] ?>');">
+                                        <h2 class="tours__imgs__slide__title "><?php the_title(); ?></h2>
+                                        <a href="<?php the_permalink(); ?>" class="tours__imgs__slide__link verde">View Tour</a>
+                                    </div>
+                                         
+                                    <?php
+                                     
+                                  }
+                                }
+                              ?>
                            
                             
                             

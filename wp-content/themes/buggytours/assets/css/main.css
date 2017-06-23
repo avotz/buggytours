@@ -575,10 +575,10 @@ table {
 }
 body {
   font-family: 'Roboto', serif;
-  font-size: 80%;
+  font-size: 100%;
   line-height: 30px;
   background: #fff;
-  color: #a1a0a0;
+  color: #000;
 }
 ul {
   margin: 0;
@@ -618,6 +618,19 @@ textarea {
 textarea {
   height: 90px;
 }
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  border-radius: 0 !important;
+  min-height: 36px !important;
+}
+.select2-container {
+  width: 100% !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  margin-top: 1px !important;
+  background-color: #ff3eaa !important;
+  color: #fff;
+}
 .right {
   right: 0;
 }
@@ -636,6 +649,9 @@ textarea {
 }
 .times {
   font-family: 'Times New Roman', serif !important;
+}
+.hidden {
+  display: none;
 }
 .no-padding {
   padding-left: 0 !important;
@@ -1117,6 +1133,55 @@ textarea {
   overflow: hidden;
   background-color: #97d301;
 }
+.tours-items {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.tours-items .tours-item {
+  width: 33.33%;
+  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+}
+.tours-items .tours-item img {
+  display: block;
+}
+.tours-items .tours-item h4 {
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #0a3681;
+}
+.tours-items .tours-item h4 a {
+  color: #fff;
+}
+.tours-items .tours-item a {
+  color: #ff3eaa;
+}
+.tours-items .tours-item .entry-excerpt {
+  background-color: #e7f4fc;
+}
+.tours-items .tours-item .entry-excerpt-wrapper {
+  padding: 0.5rem;
+}
+.tours-items .tours-item:hover h4 {
+  background-color: #97d301;
+}
 .tours__text {
   display: none;
   position: relative;
@@ -1161,7 +1226,8 @@ textarea {
 .tours__imgs__slide__title {
   position: relative;
   top: 40%;
-  font-size: 4rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   z-index: 2;
   text-transform: uppercase;
 }
@@ -1476,8 +1542,21 @@ textarea {
     font-size: 3.5rem;
   }
 }
-.entry-content ul {
+.entry-content ul,
+.entry-summary ul {
   margin-left: 45px;
+}
+.entry-content .tour-popup-link,
+.entry-summary .tour-popup-link {
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.entry-content .tour-popup-link:hover,
+.entry-summary .tour-popup-link:hover {
+  color: #fff;
+  background: #04397b !important;
 }
 .about,
 .contact {
@@ -1826,4 +1905,80 @@ textarea {
     color: #d6d6d6;
     border-color: #d6d6d6;
   }
+}
+.tour-banner {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 350px;
+  min-height: 0;
+  max-height: initial;
+}
+.woocommerce div.product {
+  overflow: hidden;
+}
+.woocommerce div.product .video {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 350px;
+}
+.product-description-accordion-button {
+  background-color: #e7e7e7;
+  border-color: #b9b9b9;
+  color: #333;
+  display: block;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.product-description-accordion-button:hover {
+  background-color: #b9b9b9;
+  color: #fff;
+}
+.product-description-accordion-content {
+  background-color: #e3e3e3;
+  padding: 1rem;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-position: bottom center;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 0;
+  max-height: initial;
+}
+@media screen and (min-width: 1000px) {
+  .tour-banner {
+    height: 400px;
+  }
+  .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 400px;
+  }
+}
+.woocommerce ul.products li.product a img {
+  margin-bottom: 0;
+}
+.woocommerce-loop-product__title {
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #0a3681;
 }

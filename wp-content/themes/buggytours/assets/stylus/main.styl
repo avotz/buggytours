@@ -6,7 +6,7 @@
 
 verde = #97d301
 turquesa = #68C8CE
-azul = #25323D
+azul = #0A3681
 celeste = #25a1e7
 fusia = #FF3EAA
 gris = #777777
@@ -23,10 +23,10 @@ naranja = #FD6100
 
 body
 	font-family 'Roboto', serif
-	font-size 80%
+	font-size 100%
 	line-height 30px
 	background #FFF
-	color gris2
+	color #000//gris2
 
 ul
 	margin 0
@@ -60,6 +60,17 @@ textarea
 	height 32px
 textarea
 	height 90px
+.select2-container--default .select2-selection--single
+.select2-container--default .select2-selection--multiple
+	border-radius 0 !important
+	min-height 36px !important
+.select2-container
+	width 100% !important
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+	margin-top 1px !important
+	background-color fusia !important
+	color white
 .right
 	right 0
 .left
@@ -73,6 +84,8 @@ textarea
 	font-style italic
 .times 
 	font-family 'Times New Roman', serif	!important
+.hidden
+	display none 
 .no-padding
 	padding-left 0 !important
 	padding-right 0 !important
@@ -440,11 +453,37 @@ textarea
 		&__title
 			font-size 5rem
 		
-			
+		
 .tours
 	margin-top 70px
 	overflow hidden
 	background-color verde
+	&-items 
+		display flex
+		flex-wrap wrap 
+		justify-content space-between
+		.tours-item
+			width 33.33%
+			box-shadow 1px 1px 2px rgba(0,0,0,.35)
+			img 
+				display block
+			h4
+				color white
+				margin-bottom 0
+				text-align center
+				background-color azul
+				a 
+					color white
+			a 
+				color fusia
+			.entry-excerpt
+				background-color #E7F4FC
+				&-wrapper
+					padding .5rem
+			&:hover
+				h4
+					background-color verde
+		
 	&__text
 		display none
 		position relative
@@ -486,7 +525,8 @@ textarea
 			&__title
 				position relative
 				top 40%
-				font-size 4rem
+				font-size 2.5rem//4rem
+				line-height 2.5rem
 				z-index 2
 				text-transform uppercase
 			&__link
@@ -702,8 +742,17 @@ textarea
 			font-size 3.5rem
 
 .entry-content
+.entry-summary
 	ul 
-		margin-left 45px 
+		margin-left 45px
+	.tour-popup-link
+		width 100%
+		border none
+		text-align center
+		font-size 1.5rem
+		&:hover
+			color white
+			background #04397B !important 
 		
 .about
 .contact
@@ -950,6 +999,74 @@ textarea
 			&__link
 				color #D6D6D6
 				border-color #D6D6D6
+
+.tour-banner
+	background-size cover
+	background-position 50% 50%
+	position absolute
+	top 0
+	left 0
+	bottom 0
+	right 0
+	height 350px
+	min-height 0
+	max-height initial
+	
+.woocommerce div.product
+	overflow hidden
+	.video 
+		margin-top .5rem
+		width 100%
+		height 350px
+
+.product-description-accordion-button
+	background-color #e7e7e7
+	border-color #b9b9b9
+	color #333
+	display block
+	padding .5rem
+	cursor pointer
+	text-align center
+	margin-bottom 0
+	text-transform uppercase
+	font-size 1rem
+	&:hover
+		background-color #b9b9b9
+		color white
+		
+.product-description-accordion-content
+	background-color #e3e3e3
+	padding 1rem
+
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper
+	background-size contain;
+	background-position bottom center;
+	position relative
+	top 0
+	left 0
+	bottom 0
+	right 0
+	min-height 0
+	max-height initial
+
+@media screen and (min-width:1000px)
+	.tour-banner
+		height 400px
+	.woocommerce div.product div.images .woocommerce-product-gallery__wrapper
+		background-size cover;
+		background-position 50% 50%
+		height 400px
+
+.woocommerce ul.products li.product a img
+	margin-bottom 0
+.woocommerce-loop-product__title
+	color white
+	margin-bottom 0
+	text-align center
+	background-color azul
+
+
+
 			
 		 
 			
