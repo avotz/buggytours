@@ -223,7 +223,7 @@
         
           $.ajax({
                 type: 'GET',
-                url: '/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+                url: '/buggytours/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
                 
                 success: function(data){
                     console.log(data)
