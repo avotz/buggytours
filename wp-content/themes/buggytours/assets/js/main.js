@@ -18,6 +18,20 @@
     });
        $('select').select2();
 
+
+     menu.find(".menu-item-has-children").hoverIntent({
+          over: function() {
+
+                $(this).find(">.sub-menu").slideDown(200 );
+              },
+          out:  function() {
+                
+                $(this).find(">.sub-menu").slideUp(200);
+              },
+          timeout: 200
+
+           });
+
     // SMOOTH ANCHOR SCROLLING
     var $root = $('html, body');
     $('a.anchor').click(function(e) {
@@ -135,12 +149,16 @@
     $(window).load(function() {
      
       
-      $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-        $('.preloader').hide();
-        $('.intro__video').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-          //$('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+      // $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+      //   $('.preloader').hide();
+      //   $('.intro__video').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+      //     //$('.intro__video').css('opacity', '1');
+      //     //$('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+      //   });
+      // });
+       $('.intro__video').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+         
         });
-      });
       resizes();
 
     });
@@ -151,10 +169,14 @@
      {
       
       
-        if(getWindowWidth() > 1350)
+        if(getWindowWidth() > 1350){
             $('.intro__video video').height('auto').width($("body").width() + 90);
-          else
+            $('.intro__video iframe').height('100%').width($("body").width() + 90);
+        }
+          else{
             $('.intro__video video').height($("body").height() + 90).width('auto');
+            $('.intro__video iframe').height($("body").height() + 90).width('100%');
+          }
         
           
       
@@ -223,7 +245,7 @@
         
           $.ajax({
                 type: 'GET',
-                url: '/buggytours/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+                url: '/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
                 
                 success: function(data){
                     console.log(data)

@@ -23,7 +23,7 @@ get_header(); ?>
                         <div class="intro__cuadro fusia wow fadeInDown">
                             <span class="intro__cuadro__subtitle">Explore</span>
                             <h2 class="intro__cuadro__title">Tours</h2>
-                            <a href="<?php echo esc_url( home_url( '/tours' ) ); ?>" class="intro__cuadro__link"></a>
+                            <a href="#tours" class="intro__cuadro__link anchor"></a>
                             
                         </div>
                         
@@ -32,7 +32,8 @@ get_header(); ?>
                    
                 </div>
                 <div class="intro__video">
-                   <video preload="" autobuffer="" loop="loop" autoplay="autoplay"><source src="<?php echo get_template_directory_uri();  ?>/img/home.mp4" type="video/mp4"></video>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/LyeRAYWIT7w?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                   <!-- <video preload="" autobuffer="" loop="loop" autoplay="autoplay"><source src="<?php echo get_template_directory_uri();  ?>/img/home.mp4" type="video/mp4"></video> -->
                 </div>
                 
                 
