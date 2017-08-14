@@ -39,12 +39,13 @@
                      
                     <div class="footer__logo">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer__logo__link" title="Rental Bikes Costa Rica">Buggy Tours Costa Rica</a>
-                        <span>Copyright &copy; <?php echo date('Y'); ?></span>
+                         <span> (506) 2672 1248 -  (506) 8833 1410</span>
                     </div>
                     
                     
                     <div class="footer__copyright">
                         <p>Website by <a href="http://avotz.com"><i class="icon-avotz"></i></a></p>
+                        <span>Copyright &copy; <?php echo date('Y'); ?></span>
                     </div>
                    
                    

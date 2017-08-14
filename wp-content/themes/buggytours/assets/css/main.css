@@ -1860,6 +1860,9 @@ textarea {
   vertical-align: middle;
   color: #a1a0a0;
 }
+.footer__copyright span {
+  font-size: 11px;
+}
 @media screen and (min-width: 1024px) {
   .footer {
     background-color: #222;
@@ -1903,7 +1906,7 @@ textarea {
     position: absolute;
     left: 5%;
     float: left;
-    top: 30%;
+    top: 0;
   }
   .footer__social {
     float: right;
