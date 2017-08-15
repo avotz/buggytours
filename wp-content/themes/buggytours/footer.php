@@ -29,7 +29,7 @@
             <div class="footer__bottom">
                 <div class="inner">
                 <div class="footer__social">
-                         <a href="#" class="footer__social__link facebook"><i class="icon-facebook"></i></a>
+                         <a href="https://www.facebook.com/BuggyToursCostaRica/" class="footer__social__link facebook" target="_blank"><i class="icon-facebook"></i></a>
                          <a href="#" class="footer__social__link twitter"><i class="icon-twitter"></i></a>
                          <a href="#" class="footer__social__link google"><i class="icon-google-plus"></i></a>
                          <a href="#" class="footer__social__link youtube"><i class="icon-youtube"></i></a>
