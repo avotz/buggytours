@@ -161,7 +161,7 @@ get_header(); ?>
             </div>
             <div class="about__img">
 
-                <div class="about__img__container" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/about.jpg');"></div>
+                <div class="about__img__container" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/about-1.jpg');"></div>
                  <a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>" class="about__link">Meet the team</a>                 
             </div>
         </section>
