@@ -1562,6 +1562,7 @@ textarea {
   border: none;
   text-align: center;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .entry-content .tour-popup-link:hover,
 .entry-summary .tour-popup-link:hover {
@@ -1945,9 +1946,9 @@ textarea {
   width: 100%;
 }
 .product-description-accordion-button {
-  background-color: #e7e7e7;
-  border-color: #b9b9b9;
-  color: #333;
+  background-color: #0a3681;
+  border-color: #0a3681;
+  color: #fff;
   display: block;
   padding: 0.5rem;
   cursor: pointer;
