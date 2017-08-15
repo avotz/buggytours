@@ -1946,6 +1946,9 @@ textarea {
 .woocommerce div.product .video iframe {
   width: 100%;
 }
+.woocommerce div.product .product_title {
+  text-align: center;
+}
 .product-description-accordion-button {
   background-color: #0a3681;
   border-color: #0a3681;
