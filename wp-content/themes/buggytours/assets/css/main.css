@@ -1555,6 +1555,7 @@ textarea {
 .entry-content ul,
 .entry-summary ul {
   margin-left: 45px;
+  margin-bottom: 1rem;
 }
 .entry-content .tour-popup-link,
 .entry-summary .tour-popup-link {
