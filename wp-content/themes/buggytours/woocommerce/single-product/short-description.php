@@ -29,9 +29,9 @@ if ( ! $post->post_excerpt ) {
 ?>
 <div class="product-description-accordion">
  <h2 class="product-description-accordion-button">
- <i class="fa fa-angle-down"></i> 
+ <!-- <i class="fa fa-angle-down"></i>  -->
  	 More Info
- <i class="fa fa-angle-down"></i></h2>
+ <!-- <i class="fa fa-angle-down"></i></h2> -->
  <div class="product-description-accordion-content">
 	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
  </div>
