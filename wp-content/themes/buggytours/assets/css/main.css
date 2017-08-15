@@ -1696,7 +1696,8 @@ textarea {
   min-height: 400px !important;
 }
 .iframe-fb {
-  float: none;
+  width: 100% !important;
+  float: none !important;
 }
 @media screen and (min-width: 1024px) {
   .contact,
@@ -1794,7 +1795,8 @@ textarea {
     min-height: 758px !important;
   }
   .iframe-fb {
-    float: left;
+    width: auto !important;
+    float: left !important;
   }
 }
 @media screen and (min-width: 1200px) {
