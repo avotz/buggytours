@@ -1691,6 +1691,10 @@ textarea {
   width: 100%;
   min-height: 400px;
 }
+.about #wd-map8,
+.contact #wd-map8 {
+  min-height: 400px !important;
+}
 @media screen and (min-width: 1024px) {
   .contact,
   .about {
@@ -1782,6 +1786,9 @@ textarea {
   .contact iframe {
     width: 100%;
     min-height: 758px;
+  }
+  .contact #wd-map8 {
+    min-height: 758px !important;
   }
 }
 @media screen and (min-width: 1200px) {
