@@ -26,6 +26,6 @@ global $product;
 <p class="price"><?php echo $product->get_price_html(); ?></p>
 <a href="#tour-popup" class="btn verde tour-popup-link" data-title="<?php echo $product->get_slug(); ?>">
 	  
-       Inquery now
+       Inquiry now
       
       </a>
