@@ -32,7 +32,8 @@ get_header(); ?>
                    
                 </div>
                 <div class="intro__video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/LyeRAYWIT7w?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/svAHi-eVXss?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                  
                    <!-- <video preload="" autobuffer="" loop="loop" autoplay="autoplay"><source src="<?php echo get_template_directory_uri();  ?>/img/home.mp4" type="video/mp4"></video> -->
                 </div>
                 

@@ -29,11 +29,10 @@
             <div class="footer__bottom">
                 <div class="inner">
                 <div class="footer__social">
-                         <a href="#" class="footer__social__link facebook"><i class="icon-facebook"></i></a>
-                         <a href="#" class="footer__social__link twitter"><i class="icon-twitter"></i></a>
-                         <a href="#" class="footer__social__link google"><i class="icon-google-plus"></i></a>
-                         <a href="#" class="footer__social__link youtube"><i class="icon-youtube"></i></a>
-                         <a href="#" class="footer__social__link pinterest"><i class="icon-pinterest-p"></i></a>
+                         <a href=" https://www.facebook.com/BuggyToursCostaRica" class="footer__social__link facebook" target="_blank"><i class="icon-facebook"></i></a>
+                         <a href="https://www.instagram.com/buggytourscostarica" class="footer__social__link instagram" target="_blank"><i class="icon-instagram"></i></a>
+                         <a href="https://www.tripadvisor.com/FAQ_Answers-g309246-d9811670-t2813425-Do_you_need_to_book_this_in_advance_or_can_you.html" class="footer__social__link tripadvisor" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+                         
                          
                     </div>
                      

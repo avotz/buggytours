@@ -59,7 +59,7 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('css', function () {
-  gulp.src(['./assets/css/main.css','./assets/css/magnific-popup.css','./assets/css/uniform.default.css','./assets/css/chosen.css','./assets/css/animate.css','./assets/css/owl.carousel.css','./assets/css/flatpickr.min.css','./assets/css/select2.min.css'])
+  gulp.src(['./assets/css/main.css','./assets/css/font-awesome.css','./assets/css/magnific-popup.css','./assets/css/uniform.default.css','./assets/css/chosen.css','./assets/css/animate.css','./assets/css/owl.carousel.css','./assets/css/flatpickr.min.css','./assets/css/select2.min.css'])
     .pipe(minifyCSS({ keepSpecialComments: '*', keepBreaks: '*'}))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./'))
