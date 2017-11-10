@@ -129,7 +129,7 @@ get_header(); ?>
                                      <?php the_excerpt(); ?>
 
                                 </div>
-                                <a href="<?php echo esc_url( home_url( '/buggy' ) ); ?>" class="buggy__link">View Collection</a>
+                                <a href="<?php echo esc_url( home_url( '/terms-and-requirements' ) ); ?>" class="buggy__link">View More</a>
                             </div>
                             
 
