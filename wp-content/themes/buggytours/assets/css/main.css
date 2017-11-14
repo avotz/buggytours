@@ -2020,3 +2020,8 @@ textarea {
   text-align: center;
   background-color: #0a3681;
 }
+.form-paypal {
+  margin-top: 5px;
+  max-width: 200px;
+  margin: 16px auto 0;
+}
