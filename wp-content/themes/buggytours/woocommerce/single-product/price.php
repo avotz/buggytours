@@ -30,7 +30,7 @@ global $product;
       
       </a>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="form-paypal" style="margin-top:5px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="AXNLYA8AFELZL">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
