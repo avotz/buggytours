@@ -239,13 +239,46 @@
     });
 
      fillSelectTour();
+    fillSelectTourContact();
+    function fillSelectTourContact() {
 
+
+        $.ajax({
+            type: 'GET',
+            url: '/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+
+            success: function (data) {
+                console.log(data)
+
+                var items = [];
+
+                var select = $('select[name="subject[]"]').empty();
+                $.each(data.posts, function (i, item) {
+                    select.append('<option value="'
+                        + $.trim(item.slug) + '">'
+                        + item.title
+                        + '</option>');
+
+
+
+                });
+
+
+                select.prepend('<option value="General Information" selected><span style="color:red;">--</span></option>');
+
+            },
+            error: function () {
+                console.log('error cargando los tours')
+            }
+        });
+
+    }
   function fillSelectTour(){
          
         
           $.ajax({
                 type: 'GET',
-                url: '/buggytours/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+                url: '/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
                 
                 success: function(data){
                     console.log(data)
