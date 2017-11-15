@@ -5853,7 +5853,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
                 });
 
 
-                select.prepend('<option value="General Information" selected><span style="color:red;">--</span></option>');
+                select.prepend('<option value="General Information"><span style="color:red;">General Information</span></option>');
 
             },
             error: function () {
