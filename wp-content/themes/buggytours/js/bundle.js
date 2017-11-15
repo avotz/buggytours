@@ -5844,7 +5844,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
                 var select = $('select[name="subject[]"]').empty();
                 $.each(data.posts, function (i, item) {
                     select.append('<option value="'
-                        + $.trim(item.slug) + '">'
+                        + $.trim(item.title) + '">'
                         + item.title
                         + '</option>');
 
